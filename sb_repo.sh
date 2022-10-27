@@ -13,9 +13,9 @@
 ################################
 
 VERBOSE=false
-BRANCH='master'
+BRANCH='derek/adjust'
 SALTBOX_PATH="/srv/git/saltbox"
-SALTBOX_REPO="https://github.com/saltyorg/saltbox.git"
+SALTBOX_REPO="https://github.com/hereisderek/Saltbox.git"
 
 ################################
 # Functions
