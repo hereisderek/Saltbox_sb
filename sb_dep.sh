@@ -91,7 +91,9 @@ apt-get install -y \
     python3-testresources \
     python3-apt \
     python3-virtualenv \
-    python3-venv
+    python3-venv \
+    jq \
+    moreutils
 
 ## Check locale contains UTF-8 and if not change it to en_US.UTF-8
 if (locale charmap | grep -qi 'utf-\+8'); then
