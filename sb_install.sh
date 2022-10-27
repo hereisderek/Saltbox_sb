@@ -134,4 +134,4 @@ fi
 run_cmd bash -H $SB_PATH/sb_dep.sh $VERBOSE_OPT
 
 # Clone Saltbox Repo
-run_cmd bash -H $SB_PATH/sb_repo.sh -b master $VERBOSE_OPT
+run_cmd bash -H $SB_PATH/sb_repo.sh $VERBOSE_OPT
