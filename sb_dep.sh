@@ -41,7 +41,7 @@ readonly PYTHON_CMD_SUFFIX="-m pip install \
                             --timeout=360 \
                             --no-cache-dir \
                             --disable-pip-version-check \
-                            --upgrade"
+                            --upgrade --break-system-packages"
 readonly PYTHON3_CMD="/srv/ansible/venv/bin/python3 $PYTHON_CMD_SUFFIX"
 readonly ANSIBLE=">=7.0.0,<8.0.0"
 
@@ -167,8 +167,8 @@ if [[ $release =~ (focal)$ ]]; then
 
 elif [[ $release =~ (jammy|lunar)$ ]]; then
     echo "Jammy, deploying venv with Python3."
+    rm -rf /usr/lib/python3.*/EXTERNALLY-MANAGED
     run_cmd python3 -m venv venv || error "Failed to create venv using Python 3."
-
 else
     error "Unsupported Distro, exiting."
 fi
