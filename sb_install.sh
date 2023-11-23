@@ -18,9 +18,10 @@ VERBOSE_OPT=""
 # SB_REPO="https://github.com/saltyorg/sb.git"
 SB_REPO="https://github.com/hereisderek/Saltbox_sb.git"
 SB_PATH="/srv/git/sb"
+SB_BRANCH="master"
 SB_INSTALL_SCRIPT="$SB_PATH/sb_install.sh"
 SCRIPT_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/$(basename "${BASH_SOURCE[0]}")"
-BRANCH="master"
+BRANCH="master" # saltbox branch
 
 ################################
 # Functions
@@ -137,7 +138,7 @@ fi
 # Clone SB repo
 run_cmd mkdir -p /srv/git
 run_cmd mkdir -p /srv/ansible
-run_cmd git clone --branch master "${SB_REPO}" "$SB_PATH"
+run_cmd git clone --branch "${SB_BRANCH}" "${SB_REPO}" "$SB_PATH"
 
 # Set chmod +x on script files
 run_cmd chmod +x $SB_PATH/*.sh
