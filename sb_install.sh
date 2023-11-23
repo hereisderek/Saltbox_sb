@@ -112,12 +112,12 @@ else
 fi
 
 # Check for LXC using systemd-detect-virt
-if systemd-detect-virt -c | grep -qi 'lxc'; then
-    echo "==== UNSUPPORTED VIRTUALIZATION ===="
-    echo "Install cancelled: Running in an LXC container is not supported."
-    echo "==== UNSUPPORTED VIRTUALIZATION ===="
-    exit 1
-fi
+# if systemd-detect-virt -c | grep -qi 'lxc'; then
+#     echo "==== UNSUPPORTED VIRTUALIZATION ===="
+#     echo "Install cancelled: Running in an LXC container is not supported."
+#     echo "==== UNSUPPORTED VIRTUALIZATION ===="
+#     exit 1
+# fi
 
 echo "Installing Saltbox Dependencies."
 
