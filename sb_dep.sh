@@ -165,7 +165,7 @@ if [[ $release =~ (focal)$ ]]; then
     run_cmd python3.10 -m venv venv \
         || error "Failed to create venv using Python 3.10"
 
-elif [[ $release =~ (jammy)$ ]]; then
+elif [[ $release =~ (jammy|lunar)$ ]]; then
     echo "Jammy, deploying venv with Python3."
     run_cmd python3 -m venv venv || error "Failed to create venv using Python 3."
 
